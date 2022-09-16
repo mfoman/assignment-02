@@ -3,28 +3,87 @@ namespace Lib.Tests;
 public class StudentTest
 {
     [Fact]
-    public void Student_returns_right_state_depending_on_dates()
+    public void Student_with_graduration_date_has_status_gradurated()
     {
         // Given
-        var date = new DateTime();
+        var yesterday = DateTime.Now.AddDays(-1);
+        var tomorrow = DateTime.Now.AddDays(1);
+        var now = DateTime.Now;
 
-        var student = new Student(42)
+        // When
+        var studentGraduate = new Student(42)
         {
             GivenName = "Frederik",
             SurName = "Raisa",
-            StartDate = date,
-            EndDate = date,
-            GraduationDate = date
+            StartDate = yesterday,
+            EndDate = tomorrow,
+            GraduationDate = tomorrow
         };
 
-        // When
+        // Then
+        studentGraduate.Status.Should().Be(Status.Graduated);
+    }
 
-        // If graduationdate is set - set grad
-        // if date now is between start and enddate - set active
-        // if time is after enddate but no graddate - set dropout
-        // if no start or enddate - set new
+    [Fact]
+    public void Student_with_enddate_after_today_is_active()
+    {
+        // Given
+        var yesterday = DateTime.Now.AddDays(-1);
+        var tomorrow = DateTime.Now.AddDays(1);
+        var now = DateTime.Now;
+
+        // When
+        var studentGraduate = new Student(42)
+        {
+            GivenName = "Frederik",
+            SurName = "Raisa",
+            StartDate = yesterday,
+            EndDate = tomorrow,
+        };
 
         // Then
+        studentGraduate.Status.Should().Be(Status.Active);
+    }
+
+    [Fact]
+    public void Student_with_no_gradurate_date_and_enddate_before_today_is_dropout()
+    {
+        // Given
+        var yesterday = DateTime.Now.AddDays(-1);
+        var tomorrow = DateTime.Now.AddDays(1);
+        var now = DateTime.Now;
+
+        // When
+        var studentGraduate = new Student(42)
+        {
+            GivenName = "Frederik",
+            SurName = "Raisa",
+            StartDate = yesterday,
+            EndDate = yesterday,
+        };
+
+        // Then
+        studentGraduate.Status.Should().Be(Status.Dropout);
+    }
+
+    [Fact]
+    public void Student_with_no_end_date_is_new()
+    {
+        // Given
+        var yesterday = DateTime.Now.AddDays(-1);
+        var tomorrow = DateTime.Now.AddDays(1);
+        var now = DateTime.Now;
+
+        // When
+        var studentGraduate = new Student(42)
+        {
+            GivenName = "Frederik",
+            SurName = "Raisa",
+            StartDate = yesterday,
+        };
+
+        // Then
+        studentGraduate.Status.Should().Be(Status.New);
     }
 
     [Fact]
@@ -48,7 +107,7 @@ public class StudentTest
             Id: 42
             GivenName: Frederik
             SurName: Raisa
-            Status: New
+            Status: Graduated
             StartDate: {date}
             EndDate: {date}
             GraduationDate: {date}

@@ -17,13 +17,25 @@ public class Student
 
     public string? SurName { get; set; }
 
-    public Status Status { get; } = Status.New;
+    public Status Status
+    {
+        get { return GetStatus(); }
+    }
 
-    public DateTime StartDate { get; set; }
+    public DateTime? StartDate { get; set; }
 
-    public DateTime EndDate { get; set; }
+    public DateTime? EndDate { get; set; }
 
-    public DateTime GraduationDate { get; set; }
+    public DateTime? GraduationDate { get; set; }
+
+    private Status GetStatus()
+    {
+        if (GraduationDate is DateTime) return Status.Graduated;
+        if (DateTime.Now > EndDate) return Status.Dropout;
+        if (DateTime.Now < EndDate) return Status.Active;
+
+        return Status.New;
+    }
 
     public override string ToString()
     {
