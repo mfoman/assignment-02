@@ -11,8 +11,9 @@ public class StudentTest
         var now = DateTime.Now;
 
         // When
-        var studentGraduate = new Student(42)
+        var studentGraduate = new Student
         {
+            Id = 42,
             GivenName = "Frederik",
             SurName = "Raisa",
             StartDate = yesterday,
@@ -33,8 +34,9 @@ public class StudentTest
         var now = DateTime.Now;
 
         // When
-        var studentGraduate = new Student(42)
+        var studentGraduate = new Student
         {
+            Id = 42,
             GivenName = "Frederik",
             SurName = "Raisa",
             StartDate = yesterday,
@@ -54,8 +56,9 @@ public class StudentTest
         var now = DateTime.Now;
 
         // When
-        var studentGraduate = new Student(42)
+        var studentGraduate = new Student
         {
+            Id = 42,
             GivenName = "Frederik",
             SurName = "Raisa",
             StartDate = yesterday,
@@ -75,8 +78,9 @@ public class StudentTest
         var now = DateTime.Now;
 
         // When
-        var studentGraduate = new Student(42)
+        var studentGraduate = new Student
         {
+            Id = 42,
             GivenName = "Frederik",
             SurName = "Raisa",
             StartDate = yesterday,
@@ -91,8 +95,9 @@ public class StudentTest
     {
         var date = new DateTime();
 
-        var student = new Student(42)
+        var student = new Student
         {
+            Id = 42,
             GivenName = "Frederik",
             SurName = "Raisa",
             StartDate = date,
@@ -115,4 +120,19 @@ public class StudentTest
 
         result.Should().Be(expected);
     }
+
+    [Fact]
+    public void ToString_Stringify_Immutable_Student_Record_Works()
+    {
+        var date = new DateTime();
+
+        var student = new ImmutableStudent(42, "Frederik", "Raisa", Status.Graduated, date, date, date);
+
+        var result = student.ToString();
+
+        var expected = @"ImmutableStudent { Id = 42, GivenName = Frederik, Surname = Raisa, Status = Graduated, StartDate = 01/01/0001 00.00.00, EndDate = 01/01/0001 00.00.00, GraduationDate = 01/01/0001 00.00.00 }";
+        
+        result.Should().Be(expected);
+    }
+
 }
