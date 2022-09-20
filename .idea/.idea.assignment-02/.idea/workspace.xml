@@ -4,7 +4,11 @@
     <projectFile>Assignment2/Assignment2.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="66ba20d6-72a6-4bd0-8a93-af357dbcbb33" name="Changes" comment="" />
+    <list default="true" id="66ba20d6-72a6-4bd0-8a93-af357dbcbb33" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2/Extensions.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,7 +64,9 @@
       <option name="presentableId" value="Default" />
       <updated>1663412670328</updated>
       <workItem from="1663412675561" duration="1558000" />
-      <workItem from="1663574879710" duration="5875000" />
+      <workItem from="1663574879710" duration="6236000" />
+      <workItem from="1663660315950" duration="1219000" />
+      <workItem from="1663668508950" duration="2711000" />
     </task>
     <servers />
   </component>
