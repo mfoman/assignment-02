@@ -15,6 +15,7 @@ public class QueriesTests
             "Harry",
             "Ron",
             "Hermie",
+            "Harry",
             "Swoldemort",
             "Neville",
         };
