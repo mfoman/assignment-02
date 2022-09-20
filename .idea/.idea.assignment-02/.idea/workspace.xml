@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ba20d6-72a6-4bd0-8a93-af357dbcbb33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assignment2/Delegates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected=".NET Project.Assignment2">
+  <component name="RunManager">
     <configuration name="Assignment2" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
