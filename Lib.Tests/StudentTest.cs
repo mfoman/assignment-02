@@ -126,12 +126,12 @@ public class StudentTest
     {
         var date = new DateTime();
 
-        var student = new ImmutableStudent(42, "Frederik", "Raisa", Status.Graduated, date, date, date);
+        var student = new ImmutableStudent(42, "Frederik", "Raisa", date, date, date);
 
         var result = student.ToString();
 
-        var expected = @"ImmutableStudent { Id = 42, GivenName = Frederik, Surname = Raisa, Status = Graduated, StartDate = 01/01/0001 00.00.00, EndDate = 01/01/0001 00.00.00, GraduationDate = 01/01/0001 00.00.00 }";
-        
+        var expected = @$"ImmutableStudent {{ Id = 42, GivenName = Frederik, Surname = Raisa, StartDate = {date}, EndDate = {date}, GraduationDate = {date}, Status = Graduated }}";
+
         result.Should().Be(expected);
     }
 
