@@ -29,8 +29,8 @@ public static class Queries
     public static IEnumerable<(string, string)> ListByCreatorReversed(IEnumerable<Wizard> wizards)
     {
         var groups = from wiz in wizards
+                     orderby wiz.Creator descending, wiz.Name descending
                      group wiz by wiz.Creator into g
-                     orderby g.Key descending
                      select g;
 
         foreach (var creatorGroup in groups)

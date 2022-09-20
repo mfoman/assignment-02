@@ -57,7 +57,7 @@ public class QueriesTests
     {
         var allwiz = WizardCollection.Create();
 
-        var filtered = Queries.ListByCreatorReversed(allwiz);
+        var filtered = Queries.ListByCreatorReversed(allwiz).ToList();
 
         var expected = new List<(String, String)> {
             ("George Lucas", "Darth Vader"),
@@ -75,6 +75,7 @@ public class QueriesTests
             ("J.R.R. Tolkien", "William the gray"),
         };
 
-        filtered.Should().BeEquivalentTo(expected);
+        filtered[0].Should().BeEquivalentTo(("Rowling", "Swoldemort"));
+        filtered[12].Should().BeEquivalentTo(("George Lucas", "Darth Ron"));
     }
 }
