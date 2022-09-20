@@ -4,24 +4,21 @@ public enum Status
     New, Active, Dropout, Graduated
 }
 
-public record ImmutableStudent(int Id, string GivenName, string Surname,
-    Status Status, DateTime StartDate, DateTime EndDate, DateTime GraduationDate);
-
 public class Student
 {
     public int Id { get; init; }
 
-    public string? GivenName { get; init; }
+    public string? GivenName { get; set; }
 
-    public string? SurName { get; init; }
+    public string? SurName { get; set; }
 
     public Status Status => GetStatus();
 
-    public DateTime? StartDate { get; init; }
+    public DateTime? StartDate { get; set; }
 
-    public DateTime? EndDate { get; init; }
+    public DateTime? EndDate { get; set; }
 
-    public DateTime? GraduationDate { get; init; }
+    public DateTime? GraduationDate { get; set; }
 
     private Status GetStatus()
     {
