@@ -14,13 +14,7 @@ public static class Extensions
         return (year % 4 == 0);
     }
     
-    public static bool IsSecure(this Uri uri)
-    {
-        return uri.Scheme == "https";
-    }
-
-    public static int WordCount(this string str)
-    {
-        return str.Split(new char[] { ' ', '.', '?' }, StringSplitOptions.RemoveEmptyEntries).Length;
-    }
+    public static bool IsSecure(this Uri uri) => uri.Scheme == "https";
+    public static int WordCount(this string str) => str.Split(new char[] { ' ', '.', '?' }, StringSplitOptions.RemoveEmptyEntries).Length;
+    
 }
