@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="66ba20d6-72a6-4bd0-8a93-af357dbcbb33" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assignment2/Delegates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment2/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2/Extensions.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Lib.Tests/ExtensionMethodsTest.cs" beforeDir="false" />
