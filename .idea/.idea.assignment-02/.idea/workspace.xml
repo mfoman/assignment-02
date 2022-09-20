@@ -8,6 +8,11 @@
       <change afterPath="$PROJECT_DIR$/Assignment2/Delegates.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.assignment-02/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/DelegatesTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2.Tests/ExtensionsTests.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2/Extensions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assignment2/Extensions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib.Tests/ExtensionMethodsTest.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib.Tests/Lib.Tests.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Lib.Tests/Lib.Tests.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Lib/ExtensionMethods.cs" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +71,7 @@
       <workItem from="1663412675561" duration="1558000" />
       <workItem from="1663574879710" duration="6236000" />
       <workItem from="1663660315950" duration="1219000" />
-      <workItem from="1663668508950" duration="2711000" />
+      <workItem from="1663668508950" duration="3120000" />
     </task>
     <servers />
   </component>
