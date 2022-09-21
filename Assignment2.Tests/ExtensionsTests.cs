@@ -11,7 +11,7 @@ public class ExtensionsTests
     }
     
     [Fact]
-    public void IsSecure_works()
+    public void IsSecure_returns_true_on_https_and_false_on_http()
     {
         var uriSecure = new Uri("https://example.com");
         var uriUnsecure = new Uri("http://example.com");
