@@ -5,7 +5,7 @@ using Assignment2;
 public class QueriesTests
 {
     [Fact]
-    public void Test1_extension()
+    public void GetRowlingWizardsNamesByExtension_will_return_list_of_names_from_rowling()
     {
         var allwiz = WizardCollection.Create();
 
@@ -24,7 +24,7 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test1()
+    public void GetRowlingWizardsNames_will_return_list_of_names_from_rowling()
     {
         var allwiz = WizardCollection.Create();
 
@@ -43,7 +43,7 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test2_extension()
+    public void GetFirstSithLordByExtension_will_return_the_first_sith_lord()
     {
         var allwiz = WizardCollection.Create();
 
@@ -55,7 +55,7 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test2()
+    public void GetFirstSithLordBy_will_return_the_first_sith_lord()
     {
         var allwiz = WizardCollection.Create();
 
@@ -67,7 +67,7 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test3_extension()
+    public void GetUniqueFromHarryPotterByExtension_will_return_list_unique_tuples_name_year()
     {
         var allwiz = WizardCollection.Create();
 
@@ -85,7 +85,7 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test3()
+    public void GetUniqueFromHarryPotterBy_will_return_list_unique_tuples_name_year()
     {
         var allwiz = WizardCollection.Create();
 
@@ -103,56 +103,54 @@ public class QueriesTests
     }
 
     [Fact]
-    public void Test4_extension()
+    public void ListByCreatorReversedByExtension_will_return_list_tuple_creator_name_in_reverse_order()
     {
         var allwiz = WizardCollection.Create();
 
         var filtered = Queries.ListByCreatorReversedByExtension(allwiz).ToList();
 
         var expected = new List<(String, String)> {
-            ("George Lucas", "Darth Vader"),
-            ("J.R.R. Tolkien", "Sauron"),
-            ("J.R.R. Tolkien", "Gandalf"),
-            ("J.R.R. Tolkien", "Michael Mouse"),
-            ("Rowling", "Harry"),
+            ("Rowling", "Swoldemort"),
             ("Rowling", "Ron"),
+            ("Rowling", "Neville"),
             ("Rowling", "Hermie"),
             ("Rowling", "Harry"),
-            ("Rowling", "Swoldemort"),
-            ("Rowling", "Neville"),
-            ("J.R.R. Tolkien", "Smeagle"),
-            ("George Lucas", "Darth Ron"),
+            ("Rowling", "Harry"),
             ("J.R.R. Tolkien", "William the gray"),
+            ("J.R.R. Tolkien", "Smeagle"),
+            ("J.R.R. Tolkien", "Sauron"),
+            ("J.R.R. Tolkien", "Michael Mouse"),
+            ("J.R.R. Tolkien", "Gandalf"),
+            ("George Lucas", "Darth Vader"),
+            ("George Lucas", "Darth Ron"),
         };
 
-        filtered[0].Should().BeEquivalentTo(("Rowling", "Swoldemort"));
-        filtered[12].Should().BeEquivalentTo(("George Lucas", "Darth Ron"));
+        Assert.Equal(filtered, expected);
     }
 
     [Fact]
-    public void Test4()
+    public void ListByCreatorReversedBy_will_return_list_tuple_creator_name_in_reverse_order()
     {
         var allwiz = WizardCollection.Create();
 
         var filtered = Queries.ListByCreatorReversed(allwiz).ToList();
 
         var expected = new List<(String, String)> {
-            ("George Lucas", "Darth Vader"),
-            ("J.R.R. Tolkien", "Sauron"),
-            ("J.R.R. Tolkien", "Gandalf"),
-            ("J.R.R. Tolkien", "Michael Mouse"),
-            ("Rowling", "Harry"),
+            ("Rowling", "Swoldemort"),
             ("Rowling", "Ron"),
+            ("Rowling", "Neville"),
             ("Rowling", "Hermie"),
             ("Rowling", "Harry"),
-            ("Rowling", "Swoldemort"),
-            ("Rowling", "Neville"),
-            ("J.R.R. Tolkien", "Smeagle"),
-            ("George Lucas", "Darth Ron"),
+            ("Rowling", "Harry"),
             ("J.R.R. Tolkien", "William the gray"),
+            ("J.R.R. Tolkien", "Smeagle"),
+            ("J.R.R. Tolkien", "Sauron"),
+            ("J.R.R. Tolkien", "Michael Mouse"),
+            ("J.R.R. Tolkien", "Gandalf"),
+            ("George Lucas", "Darth Vader"),
+            ("George Lucas", "Darth Ron"),
         };
 
-        filtered[0].Should().BeEquivalentTo(("Rowling", "Swoldemort"));
-        filtered[12].Should().BeEquivalentTo(("George Lucas", "Darth Ron"));
+        Assert.Equal(filtered, expected);
     }
 }
